@@ -3,13 +3,18 @@ package Pracspring.hellospringprac.service;
 import Pracspring.hellospringprac.domain.Member;
 import Pracspring.hellospringprac.repository.MemberRepository;
 import Pracspring.hellospringprac.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+//Spring에 올라올 때 Service네 하고 Spring 컨테이너에 MemberService를 등록해줌
+@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
