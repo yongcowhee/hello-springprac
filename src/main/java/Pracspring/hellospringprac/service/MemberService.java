@@ -10,11 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 //Spring에 올라올 때 Service네 하고 Spring 컨테이너에 MemberService를 등록해줌
-@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
